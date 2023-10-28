@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire for student</title>
+</head>
+<body>
+    <h1>Entrez vos informations :</h1>
+    <form method="POST" action="/DevOps">
+        <table>
+            <tr>
+                <td><label for="name">Full name : </label></td>
+                <td><input type="text" id="name" name="name" value="{{ name }}"  required placeholder="your full name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail : </label></td>
+                <td><input type="text" id="email" name="email" value="{{ email }}"   required placeholder="your e-mail"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Âge : </label></td>
+                <td><input type="text" id="age" name="age" value="{{ age }}"   required placeholder="age"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Soumettre"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+    <h1>Here are the recordings for {{ module }} </h1>
+<table>
+    <tr>
+        <th>Student Name</th>
+        <th>E-mail</th>
+        <th>Age</th>
+    </tr>
+
+    {% for row in data%}
+    <tr>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+    </tr>
+    {% endfor%}
+</table>
+</body>
+</html>
