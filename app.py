@@ -1,48 +1,48 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
 import mysql.connector
 
-connection = mysql.connector.connect(host='localhost',port='3306',
-                                     database = 'devops',
-                                     user = 'root',
-                                     password = '')
+connection = mysql.connector.connect(
+    host='localhost',
+    port='3306',
+    database='devops',
+    user='root',
+    password=''
+)
+
 cursor = connection.cursor()
 
-# Create an app instance
 app = Flask(__name__)
 
-# Special python decorator which flask provides
-# This decorator will assign urls to the associated functions (here index) that is intented to perform that specific task
-
-#@app.route("/")
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        age = request.form['age']
+        module = request.form['module']
+
+        cursor.execute("INSERT INTO student (name, email, age, module) VALUES (%s, %s, %s, %s)", (name, email, age, module))
+        connection.commit()
+
     return render_template("index.html")
 
-@app.route("/DevOps")
+@app.route("/DevOps", methods=['GET', 'POST'])
 def DevOps():
-    # return some other message registration
-    cursor.execute("select * from student where module='DevOps'")
-    value = cursor.fetchall()
-    return render_template("registration.html", data=value, module='DevOps')
+    cursor.execute("SELECT * FROM student WHERE module = 'DevOps'")
+    data = cursor.fetchall()
+    return render_template("registration.html", data=data, module='DevOps')
 
-@app.route("/BigData")
+@app.route("/BigData", methods=['GET', 'POST'])
 def BigData():
-    # return some other message registration
-    cursor.execute("select * from student where module='Big Data'")
-    value = cursor.fetchall()
-    return render_template("registration.html", data=value, module='Big Data')
+    cursor.execute("SELECT * FROM student WHERE module = 'BigData'")
+    data = cursor.fetchall()
+    return render_template("registration.html", data=data, module='BigData')
 
-@app.route("/DataMining")
+@app.route("/DataMining", methods=['GET', 'POST'])
 def DataMining():
-    # return some other message registration
-    cursor.execute("select * from student where module='Data Mining'")
-    value = cursor.fetchall()
-    return render_template("registration.html", data=value, module='Data Mining')
+    cursor.execute("SELECT * FROM student WHERE module = 'DataMining'")
+    data = cursor.fetchall()
+    return render_template("registration.html", data=data, module='DataMining')
 
-# To run the application
-# Port of Flask : 5000
 if __name__ == "__main__":
-    # to activate the automatic reloader
-    # All changes will be updated in the output
     app.run(debug=True)

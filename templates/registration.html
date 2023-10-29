@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulaire for student</title>
+    <title>Enregistrement des étudiants</title>
 </head>
 <body>
-    <h1>Entrez vos informations :</h1>
-    <form method="POST" action="/DevOps">
+    <h1>Enregistrez un étudiant :</h1>
+    <form method="POST" action="/">
         <table>
             <tr>
-                <td><label for="name">Full name : </label></td>
-                <td><input type="text" id="name" name="name" value="{{ name }}"  required placeholder="your full name"></td>
+                <td><label for="name">Nom complet : </label></td>
+                <td><input type="text" id="name" name="name" required placeholder="Votre nom complet"></td>
             </tr>
             <tr>
                 <td><label for="email">E-mail : </label></td>
-                <td><input type="text" id="email" name="email" value="{{ email }}"   required placeholder="your e-mail"></td>
+                <td><input type="text" id="email" name="email" required placeholder="Votre e-mail"></td>
             </tr>
             <tr>
                 <td><label for="age">Âge : </label></td>
-                <td><input type="text" id="age" name="age" value="{{ age }}"   required placeholder="age"></td>
+                <td><input type="text" id="age" name="age" required placeholder="Âge"></td>
             </tr>
-            <tr></tr>
             <tr>
-                <td colspan="2"><input type="submit" value="Soumettre"></td>
+                <td><label for="module">Module : </label></td>
+                <td>
+                    <select id="module" name="module">
+                        <option value="DevOps">DevOps</option>
+                        <option value="BigData">BigData</option>
+                        <option value="DataMining">DataMining</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Enregistrer"></td>
             </tr>
         </table>
     </form>
 
-
-
-
-    <h1>Here are the recordings for {{ module }} </h1>
-<table>
-    <tr>
-        <th>Student Name</th>
-        <th>E-mail</th>
-        <th>Age</th>
-    </tr>
-
-    {% for row in data%}
-    <tr>
-        <td>{{row[1]}}</td>
-        <td>{{row[2]}}</td>
-        <td>{{row[3]}}</td>
-    </tr>
-    {% endfor%}
-</table>
+    <h1>Voici les enregistrements pour {{ module }} :</h1>
+    <table>
+        <tr>
+            <th>Nom de l'étudiant</th>
+            <th>E-mail</th>
+            <th>Âge</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
