@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-18T23:45:30.116Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="v92kdK2MSwV4uu5CHHMu" version="24.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-05-18T23:46:05.941Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0" etag="Nh7vLfW0M8BmrLBLfK-w" version="24.4.0" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1737" dy="2214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -201,7 +201,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="5p4GRXjHUPSxLg5HL9k5" name="Page-2">
-    <mxGraphModel grid="0" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2084" dy="1654" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -311,20 +311,6 @@
         <mxCell id="iEj63vdeyAm1fNYNH1zF-30" value="Create New Asset" style="whiteSpace=wrap;html=1;rounded=1;arcSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="420" y="555" width="147.5" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="iEj63vdeyAm1fNYNH1zF-42" value="&lt;font color=&quot;#002aff&quot; style=&quot;font-size: 16px;&quot;&gt;Include the case when there&#39;s no barcode for the serial number.&lt;br&gt;Just market as TBD.&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1031" y="-32" width="242" height="71" as="geometry" />
-        </mxCell>
-        <mxCell id="iEj63vdeyAm1fNYNH1zF-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" edge="1" parent="1" source="iEj63vdeyAm1fNYNH1zF-44">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="960" y="569.9999999999998" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="iEj63vdeyAm1fNYNH1zF-44" value="&lt;font color=&quot;#002aff&quot; style=&quot;font-size: 16px;&quot;&gt;Remove, and a note explaining&lt;br&gt;that the creation of new models is only done by admins to preserve data integrity.&lt;br&gt;Sometimes users create the same model with slight textual differences (VN1640 , VN-1640, VN 1640)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1028" y="558" width="242" height="71" as="geometry" />
-        </mxCell>
-        <mxCell id="iEj63vdeyAm1fNYNH1zF-48" value="&lt;font color=&quot;#002aff&quot;&gt;Send notification with the following information :&lt;br&gt;- Model Name&lt;br&gt;- Manufacturer&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1015" y="358" width="242" height="71" as="geometry" />
-        </mxCell>
         <mxCell id="iEj63vdeyAm1fNYNH1zF-49" value="Start" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="320" y="-70" width="160" height="40" as="geometry" />
         </mxCell>
@@ -410,7 +396,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="gEp_skfoCmODDImJtmh1" name="Page-3">
-    <mxGraphModel dx="2084" dy="1654" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel grid="0" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
